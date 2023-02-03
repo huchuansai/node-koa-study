@@ -1,3 +1,5 @@
 import run from './app'
+import config from './app/config'
+console.log(config);
 
-run(88)
+run(Number(config.server.port))
