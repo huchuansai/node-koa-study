@@ -6,6 +6,15 @@ const config = {
     db_name: process.env.DB_NAME,
     db_port: process.env.DB_PORT,
   },
+  log: {
+    appenders: {
+      cheese: { type: 'file', filename: 'cheese.log' }, // 配置日志文件显示
+      cheese2: { type: 'console' }, // 配置控制台显示
+    },
+    categories: {
+      default: { appenders: ['cheese', 'cheese2'], level: 'info' },
+    },
+  },
 }
 
 export default config
