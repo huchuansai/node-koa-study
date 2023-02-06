@@ -1,7 +1,5 @@
 import Dotenv from 'dotenv'
-console.log(Dotenv)
-
-// Dotenv.config({ path: __dirname + './env' })
+Dotenv.config()
 const config = {
   server: { port: process.env.SERVER_PORT },
   // db: {
