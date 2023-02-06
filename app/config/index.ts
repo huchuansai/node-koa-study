@@ -1,5 +1,7 @@
 import Dotenv from 'dotenv'
-Dotenv.config()
+console.log(Dotenv)
+
+// Dotenv.config({ path: __dirname + './env' })
 const config = {
   server: { port: process.env.SERVER_PORT },
   // db: {
@@ -10,11 +12,11 @@ const config = {
   // },
   log: {
     appenders: {
-      cheese: { type: 'file', filename: 'cheese.log' }, // 配置日志文件显示
+      info: { type: 'file', filename: 'logs/info.log' }, // 配置日志文件显示
       consoleLogger: { type: 'console' }, // 配置控制台显示
     },
     categories: {
-      default: { appenders: ['cheese', 'consoleLogger'], level: 'info' },
+      default: { appenders: ['info', 'consoleLogger'], level: 'info' },
     },
   },
 }
