@@ -1,3 +1,5 @@
+import Dotenv from 'dotenv'
+Dotenv.config()
 const config = {
   server: { port: process.env.SERVER_PORT },
   // db: {

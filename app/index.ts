@@ -1,9 +1,7 @@
 import Koa from 'koa'
 import router from './router'
 import { Server } from 'http'
-import Dotenv from 'dotenv'
 import AcccessLogMiddleware from './middleware'
-Dotenv.config()
 
 const app = new Koa()
 
