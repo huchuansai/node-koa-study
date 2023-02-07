@@ -4,8 +4,14 @@ import AdminService from '../service/AdminService'
 
 class IndexController {
   async index(ctx: Context) {
-    myLogger.info('hhhhhhhh')
-    ctx.body = await AdminService.getAdmin()
+    const data = await AdminService.getAdmin()
+    ctx.body = data
+  }
+
+  async save(ctx: Context) {
+    myLogger.info('save..........')
+    await AdminService.saveAdmin()
+    ctx.body = '成功'
   }
 }
 
