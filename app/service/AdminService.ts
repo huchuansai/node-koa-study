@@ -7,7 +7,7 @@ class AdminService {
     await Admin.create()
   }
   async getAdmin() {
-    return Admin.findOne()
+    return Admin.findByPk(2)
   }
 }
 

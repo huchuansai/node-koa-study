@@ -18,5 +18,9 @@ const config = {
       default: { appenders: ['info', 'consoleLogger'], level: 'info' },
     },
   },
+  jwt: {
+    JWT_SECRET: process.env.JWT_SECRET_KEY,
+    expire: process.env.JWT_EXPIRE,
+  },
 }
 export default config
