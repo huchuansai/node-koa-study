@@ -1,10 +1,11 @@
 import { Context } from 'koa'
 import { myLogger } from '../logger'
+import AdminService from '../service/AdminService'
 
 class IndexController {
   async index(ctx: Context) {
-    myLogger.info('hhhhhhhhhhh')
-    ctx.body = [1, 10, 121]
+    myLogger.info('hhhhhhhh')
+    ctx.body = await AdminService.getAdmin()
   }
 }
 

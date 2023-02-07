@@ -1,8 +1,9 @@
-import Koa from 'koa'
+import * as Koa from 'koa'
 import router from './router'
 import { Server } from 'http'
+import db from './db'
 import AcccessLogMiddleware from './middleware'
-
+db()
 const app = new Koa()
 
 app.use(AcccessLogMiddleware).use(router.routes()) // 注册路由
