@@ -4,7 +4,7 @@ import AdminService from '../service/AdminService'
 
 class IndexController {
   async index(ctx: Context) {
-    const data = await AdminService.getAdmin()
+    const data = await AdminService.getAdminById(1)
     ctx.body = data
   }
 
